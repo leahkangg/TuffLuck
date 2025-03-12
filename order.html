@@ -90,28 +90,18 @@
     max-width: 500px; /* Prevent buttons from being too wide */
     margin-bottom: 15px; /* More space between buttons */
 }
-/* Logo adjustment */
-.navbar-brand img {
-    max-height: 50px;  /* Limit logo height */
-    width: auto;       /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between logo and text */
-}
+ /* Add styles to position logo next to Tuff Luck text */
+ .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 32px; /* Adjust font size */
+        }
 
-/* Navbar text color */
-.navbar .navbar-nav li a {
-    color: white !important; /* Make the navbar links white */
-    font-size: 16px;         /* Adjust font size if needed */
-}
-
-.navbar .navbar-nav li a:hover {
-    color: #ffcc00 !important; /* Change the color when hovering */
-}
-
-/* Ensure that the navbar links don’t get mixed with the background */
-.navbar {
-    background-color: #a73535; /* Dark background color */
-}
-
+        .navbar-brand img {
+            max-height: 50px; /* Adjust logo size */
+            margin-right: 10px; /* Space between logo and text */
+        }
+        /* Make images responsive */
 
 
 /* Ensure responsiveness */
@@ -156,32 +146,41 @@
           </div>
      </section>
 
-     <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
-                    <!-- Logo Text Here with Logo Image -->
-                    <a href="index.html" class="navbar-brand">
-                        <img src="images/logo.png" alt="Tuff Luck Logo">Tuff Luck
-                    </a>
-                </div>
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="index.html" class="smoothScroll">Home</a></li>
-                         <li><a href="menu.html" class="smoothScroll">Menu</a></li>
-                         <li><a href="order.html" class="smoothScroll">Order Online</a></li>
-                         <li><a href="hours.html" class="smoothScroll">Contact and Hours</a></li>
-                         <li><a href="tel:+2142380145" class="smoothScroll">Call Now For Pickup!</a></li>
-                    </ul>
-               </div>
-          </div>
-     </section>
+        <!-- MENU -->
+        <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+  
+                 <div class="navbar-header">
+                      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                           <span class="icon icon-bar"></span>
+                           <span class="icon icon-bar"></span>
+                           <span class="icon icon-bar"></span>
+                      </button>
+  
+                        <!-- Logo Text Here with Logo Image -->
+                  <a href="index.html" class="navbar-brand">
+                      <img src="images/logo.png" alt="Tuff Luck Logo">Tuff Luck
+                  </a>
+              </div>
+                 <!-- MENU LINKS -->
+                 <div class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav navbar-nav-first">
+                           <li><a href="index.html" class="smoothScroll">Home</a></li>
+                           <li><a href="menu.html" class="smoothScroll">Menu</a></li>
+                           <li><a href="order.html" class="smoothScroll">Order Online</a></li>
+                           <li><a href="hours.html" class="smoothScroll">Contact and Hours</a></li>
+                           <li><a href="tel:+2142380145" class="smoothScroll">Call Now For Pickup!</a></li>
+  
+                           
+                      </ul>
+  
+                      
+                 </div>
+  
+            </div>
+       </section>
+  
+       
 
    
 
