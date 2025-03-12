@@ -16,14 +16,14 @@
      <link rel="stylesheet" href="css/templatemo-style.css">
 </head>
 <style>
-   /* Ensure the content-container takes up more space */
+   /* Ensure the content-container is large enough */
 .content-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     text-align: center;
-    padding: 50px 20px; /* Increased padding for a longer container */
+    padding: 50px 20px; /* Increased padding for a larger container */
     min-height: 600px; /* Ensures the container has a larger height */
 }
 
@@ -39,16 +39,16 @@
     max-width: 600px; /* Control the maximum width */
 }
 
-/* Right side image container (Make sure it's square) */
+/* Right side image container (Make it square) */
 .right-side {
     display: flex;
     justify-content: center; /* Center image horizontally */
     align-items: center; /* Center image vertically */
     flex: 1;
-    min-width: 350px;
-    height: 0; /* Set height to 0 */
-    padding-bottom: 100%; /* 100% padding makes this a square container */
-    position: relative; /* For positioning image inside the container */
+    width: 100%; /* Ensure full width */
+    max-width: 600px; /* Limit max width for the container */
+    position: relative;
+    padding-bottom: 100%; /* Create square aspect ratio */
 }
 
 /* Ensure image fits square container */
@@ -58,7 +58,7 @@
     left: 0;
     width: 100%; /* Make image fill the container width */
     height: 100%; /* Make image fill the container height */
-    object-fit: cover; /* Maintain aspect ratio and cover the square container */
+    object-fit: cover; /* Cover the container without stretching */
     border-radius: 10px;
 }
 
