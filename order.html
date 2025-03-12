@@ -24,7 +24,8 @@
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
     text-align: center;
     width: 100%; /* Ensure container takes full width */
-    padding: 20px;
+    padding: 50px 20px; /* Increased padding for a longer container */
+    min-height: 600px; /* Ensures the container has a larger height */
 }
 
 /* Left side text container */
@@ -46,13 +47,13 @@
     align-items: center; /* Center image vertically */
     flex: 1;
     min-width: 350px;
+    height: 100%; /* Ensures the image container takes the full height */
 }
 
 .right-side img {
     width: 100%; /* Ensure image takes up full width */
-    max-width: 600px; /* Keep image large but responsive */
-    height: auto;
-    object-fit: cover;
+    height: 100%; /* Ensure the height is the same as the width, making it square */
+    object-fit: cover; /* Maintain aspect ratio and ensure image covers the area */
     border-radius: 10px;
 }
 
@@ -161,7 +162,6 @@
         padding: 14px 28px;
     }
 }
-
 
 
 </style>
