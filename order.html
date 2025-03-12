@@ -95,8 +95,6 @@
             display: flex;
             align-items: center;
             font-size: 32px; /* Adjust font size */
-          background-color: #a73535;
-
         }
 
         .navbar-brand img {
@@ -104,6 +102,31 @@
             margin-right: 10px; /* Space between logo and text */
         }
         /* Make images responsive */
+
+/* Navbar background color */
+.navbar.custom-navbar {
+    background-color: #333; /* Set your desired color here (dark gray in this case) */
+}
+
+/* Navbar text color */
+.navbar .navbar-nav li a {
+    color: white !important; /* Ensure text is white */
+}
+
+.navbar .navbar-nav li a:hover {
+    color: #ffcc00 !important; /* Change color on hover */
+}
+
+/* Logo and navbar elements */
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-nav li a {
+    font-size: 16px; /* Adjust font size */
+}
+
 
 
 /* Ensure responsiveness */
