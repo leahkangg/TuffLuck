@@ -16,84 +16,79 @@
      <link rel="stylesheet" href="css/templatemo-style.css">
 </head>
 <style>
-    /* Ensure responsiveness for all screen sizes */
+    /* Make the entire container larger */
 .content-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    flex-wrap: wrap; /* Allows wrapping for small screens */
+    padding: 80px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     text-align: center;
-    gap: 30px;
+    gap: 40px; /* Increase the gap between elements */
 }
 
-/* Make sure left and right sides adjust properly */
+/* Make left side container larger */
 .left-side {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 350px;
+    max-width: 600px; /* Increase max width */
 }
 
-/* Responsive image */
+/* Adjust the right-side image size */
 .right-side img {
-    width: 100%; /* Full width for small screens */
-    max-width: 500px; /* Limit size for larger screens */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 600px; /* Larger image size */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Improve text visibility */
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Quote styling */
-.quote {
-    font-style: italic;
-    margin-top: 20px;
-    color: #555;
-}
-
-/* Navbar Styling */
-.navbar {
-    background-color: #a73535;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 28px;
-    white-space: nowrap;
-    color: #fff;
-}
-
-.navbar-brand img {
-    max-height: 40px;
-    width: auto;
-    margin-right: 10px;
-}
-
-/* Order Now button */
+/* Order Now Button larger */
 .order-btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 16px 32px;
     background-color: #a73535;
     color: white;
-    font-size: 18px;
+    font-size: 20px; /* Bigger font size */
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: background 0.3s ease-in-out;
     text-align: center;
     width: 80%; /* Default width for buttons */
-    max-width: 400px; /* Prevent buttons from being too wide */
+    max-width: 500px; /* Increase button max width */
+    margin-top: 20px; /* Slight space at the top */
 }
 
 .order-btn:hover {
     background-color: #8b2d2d;
+}
+
+/* Adjust "Order Now" section for larger screens */
+#order-section {
+    padding: 120px 40px; /* Increase padding */
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Order Now section text */
+#order-section h2 {
+    font-size: 3.5em; /* Larger font size */
+    font-weight: bold;
+}
+
+#order-section p {
+    font-size: 1.6em; /* Larger text */
+    margin-bottom: 50px;
+}
+
+/* Make Order Now buttons larger */
+#order-section .order-btn {
+    padding: 18px 36px; /* Larger padding */
+    font-size: 1.6em; /* Bigger font size */
+    width: 70%; /* Default width of the buttons */
+    max-width: 500px; /* Prevent buttons from being too wide */
+    margin-bottom: 15px; /* More space between buttons */
 }
 
 /* Ensure responsiveness */
@@ -108,24 +103,25 @@ h1 {
     }
 
     .order-btn {
-        width: 90%;
+        width: 85%; /* Increase button width for smaller screens */
     }
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2.2em; /* Adjust h1 size */
     }
 
     .quote {
-        font-size: 1.2em;
+        font-size: 1.3em; /* Increase quote font size */
     }
 
     .order-btn {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 18px; /* Adjust button text size */
+        padding: 14px 28px; /* Adjust padding */
     }
 }
+
 
 </style>
 <body>
