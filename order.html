@@ -16,121 +16,116 @@
      <link rel="stylesheet" href="css/templatemo-style.css">
 </head>
 <style>
-    /* Make the entire container larger */
+    /* Ensure centering of the content container */
 .content-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px;
+    padding: 40px;
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
     text-align: center;
-    gap: 40px; /* Increase the gap between elements */
+    gap: 40px; /* Increased gap between elements */
 }
 
-/* Make left side container larger */
+/* Left side section adjustments */
 .left-side {
     flex: 1;
     min-width: 350px;
-    max-width: 600px; /* Increase max width */
+    max-width: 600px; /* Increased max-width */
+    text-align: center; /* Center the text */
 }
 
-/* Adjust the right-side image size */
+/* Right side image adjustments */
+.right-side {
+    flex: 1;
+    min-width: 350px;
+    text-align: center; /* Center the image */
+}
+
 .right-side img {
-    width: 100%; /* Full width for smaller screens */
-    max-width: 600px; /* Larger image size */
+    width: 100%; /* Ensure image takes full width */
+    max-width: 600px; /* Keep image large but responsive */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Order Now Button larger */
+/* Order Now button adjustments */
 .order-btn {
     display: inline-block;
     padding: 16px 32px;
     background-color: #a73535;
     color: white;
-    font-size: 20px; /* Bigger font size */
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
     transition: background 0.3s ease-in-out;
     text-align: center;
-    width: 80%; /* Default width for buttons */
+    width: 80%;
     max-width: 500px; /* Increase button max width */
-    margin-top: 20px; /* Slight space at the top */
+    margin-top: 20px; /* Add space above button */
 }
 
+/* Hover state for Order Now button */
 .order-btn:hover {
     background-color: #8b2d2d;
 }
 
-/* Adjust "Order Now" section for larger screens */
+/* Adjust the order section layout */
 #order-section {
-    padding: 120px 40px; /* Increase padding */
+    padding: 100px 20px;
     background-color: #f8f8f8;
     text-align: center;
 }
 
-/* Order Now section text */
+/* Adjust Order Now text sizes */
 #order-section h2 {
-    font-size: 3.5em; /* Larger font size */
+    font-size: 3em;
     font-weight: bold;
 }
 
 #order-section p {
-    font-size: 1.6em; /* Larger text */
-    margin-bottom: 50px;
+    font-size: 1.4em;
+    margin-bottom: 40px;
 }
 
 /* Make Order Now buttons larger */
 #order-section .order-btn {
-    padding: 18px 36px; /* Larger padding */
-    font-size: 1.6em; /* Bigger font size */
-    width: 70%; /* Default width of the buttons */
-    max-width: 500px; /* Prevent buttons from being too wide */
-    margin-bottom: 15px; /* More space between buttons */
-}
- /* Add styles to position logo next to Tuff Luck text */
- .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-size: 32px; /* Adjust font size */
-            color: white !important;
-        }
-
-        .navbar-brand img {
-            max-height: 50px; /* Adjust logo size */
-            margin-right: 10px; /* Space between logo and text */
-        }
-        /* Make images responsive */
-
-/* Navbar background color */
-.navbar.custom-navbar {
-    background-color: #8f1212; /* Set your desired color here (dark gray in this case) */
+    padding: 16px 32px;
+    font-size: 1.4em;
+    width: 60%;
+    max-width: 500px;
+    margin-bottom: 15px;
 }
 
-/* Navbar text color */
-.navbar .navbar-nav li a {
-    color: white !important; /* Ensure text is white */
+/* Make navbar logo and text aligned properly */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: white !important;
 }
 
-.navbar .navbar-nav li a:hover {
-    color: #b64137 !important; /* Change color on hover */
-}
-
-/* Logo and navbar elements */
 .navbar-brand img {
     max-height: 50px;
     margin-right: 10px;
 }
 
-.navbar-nav li a {
-    font-size: 16px; /* Adjust font size */
+/* Navbar customization */
+.navbar.custom-navbar {
+    background-color: #8f1212;
 }
 
+.navbar .navbar-nav li a {
+    color: white !important;
+}
 
+.navbar .navbar-nav li a:hover {
+    color: #b64137 !important;
+}
 
-/* Ensure responsiveness */
+/* Ensure responsive design for smaller screens */
 @media (max-width: 1024px) {
     .content-container {
         flex-direction: column;
@@ -142,22 +137,22 @@
     }
 
     .order-btn {
-        width: 85%; /* Increase button width for smaller screens */
+        width: 85%; /* Increased button width on smaller screens */
     }
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.2em; /* Adjust h1 size */
+        font-size: 2.2em;
     }
 
     .quote {
-        font-size: 1.3em; /* Increase quote font size */
+        font-size: 1.3em;
     }
 
     .order-btn {
-        font-size: 18px; /* Adjust button text size */
-        padding: 14px 28px; /* Adjust padding */
+        font-size: 18px;
+        padding: 14px 28px;
     }
 }
 
