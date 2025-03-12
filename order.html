@@ -1,41 +1,25 @@
-<html lang="en">
-<head>
-     <title>Tuff Luck</title>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
-     <link rel="stylesheet" href="css/templatemo-style.css">
-</head>
 <style>
-    /* Add styles to position content side by side */
+    /* Ensure responsiveness for all screen sizes */
     .content-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 50px;
+        flex-wrap: wrap; /* Allows wrapping for small screens */
     }
 
     .left-side {
         max-width: 50%;
+        min-width: 300px;
     }
 
-   /* Updated styles for the image */
-.right-side img {
-    width: 500px;  /* Set a specific width */
-    height: 500px; /* Set a specific height to make the image square */
-    object-fit: cover; /* Ensure the image covers the entire area */
-    border-radius: 10px; /* Optional: Add a border radius for rounded corners */
-}
-
+    .right-side img {
+        width: 100%; /* Full width for small screens */
+        max-width: 500px; /* Limit size for larger screens */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        border-radius: 10px;
+    }
 
     h1 {
         font-size: 2.5em;
@@ -48,47 +32,47 @@
         color: #555;
     }
 
-    
-   /* Navbar background color */
-.navbar {
-    background-color: #a73535; /* Dark background color (you can change the hex code to your preferred color) */
-}
+    /* Navbar Styling */
+    .navbar {
+        background-color: #a73535;
+    }
 
-/* Adjust navbar brand to fix image size */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 32px; /* Adjust font size */
-    white-space: nowrap; /* Prevent text from wrapping */
-    color: #fff; /* Set text color to white for contrast */
-}
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        white-space: nowrap;
+        color: #fff;
+    }
 
-.navbar-brand img {
-    max-height: 50px; /* Ensure the logo does not get too big */
-    width: auto; /* Maintain the aspect ratio */
-    margin-right: 10px; /* Space between logo and text */
-}
-/* Order Now button */
-.order-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #a73535;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s ease-in-out;
-}
+    .navbar-brand img {
+        max-height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
 
-.order-btn:hover {
-    background-color: #8b2d2d;
-}
+    /* Order Now button */
+    .order-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #a73535;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease-in-out;
+        text-align: center;
+        width: 80%; /* Default width for buttons */
+        max-width: 400px; /* Prevent buttons from being too wide */
+    }
 
+    .order-btn:hover {
+        background-color: #8b2d2d;
+    }
 
     /* Ensure responsiveness */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         .content-container {
             flex-direction: column;
             text-align: center;
@@ -97,89 +81,24 @@
         .left-side, .right-side {
             max-width: 100%;
         }
+
+        .order-btn {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        .quote {
+            font-size: 1.2em;
+        }
+
+        .order-btn {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
     }
 </style>
-<body>
-
-     <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
-               <span class="spinner-rotate"></span>
-          </div>
-     </section>
-
-     <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
-                    <!-- Logo Text Here with Logo Image -->
-                    <a href="index.html" class="navbar-brand">
-                        <img src="images/logo.png" alt="Tuff Luck Logo">Tuff Luck
-                    </a>
-                </div>
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="index.html" class="smoothScroll">Home</a></li>
-                         <li><a href="menu.html" class="smoothScroll">Menu</a></li>
-                         <li><a href="order.html" class="smoothScroll">Order Online</a></li>
-                         <li><a href="hours.html" class="smoothScroll">Contact and Hours</a></li>
-                         <li><a href="tel:+2142380145" class="smoothScroll">Call Now For Pickup!</a></li>
-                    </ul>
-               </div>
-          </div>
-     </section>
-
-   
-
-     <!-- NEW SECTION: Quote and Image -->
-     <section id="quote-image">
-          <div class="content-container">
-               <div class="left-side">
-                    <h1>Satisfying and hot meals, delivered to your door—no storefront, just flavor.</h1>
-                    <p class="quote">A ghost kitchen experience that delivers nothing but the best.</p>
-                    <a href="#order-section" class="order-btn">Order Now</a>
-
-               </div>
-               <div class="right-side">
-                    <img src="images/IMG2235.JPG" alt="Food Delivery">
-               </div>
-          </div>
-
-       <!-- ORDER SECTION -->
-<section id="order-section" style="text-align: center; padding: 100px 20px; background-color: #f8f8f8;">
-    <h2 style="font-size: 3em; font-weight: bold;">Order Now</h2>
-    <p style="font-size: 1.4em; margin-bottom: 40px;">Get your meal delivered via your favorite service or call for pickup!</p>
-    
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-        <a href="https://www.ubereats.com/store/tuff-luck-dallas/CoN-IAqaWBWyWsIzCI5haQ" target="_blank" class="order-btn" 
-           style="padding: 16px 32px; font-size: 1.4em; width: 60%;">Order on Uber Eats</a>
-        <a href="https://www.doordash.com/store/tuff-luck-dallas-dallas-33051387/55037403/?srsltid=AfmBOorc3FksA6cOD_Qld3y85sfb-2-c_s62ME74QpjWz1GseiklV9k3" target="_blank" class="order-btn" 
-           style="padding: 16px 32px; font-size: 1.4em; width: 60%;">Order on DoorDash</a>
-        <a href="tel:+12142380145" class="order-btn" 
-           style="padding: 16px 32px; font-size: 1.4em; width: 60%;">Call for Pickup</a>
-    </div>
-    
-    <p style="margin-top: 40px; font-size: 1.3em;">📍 Find us at 2527 Royal Ln, UNIT 130, Dallas, TX 75229</p>
-</section>
-
-     
-
-     <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/jquery.magnific-popup.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
-
-</body>
-</html>
-
