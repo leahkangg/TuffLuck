@@ -82,31 +82,26 @@
 
         /* Reduce space between menu items */
         .menu-item {
-            margin-bottom: 5px; /* Reduce from 10px to 5px */
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
-        /* Reduce space between list items */
-        ul {
-            padding: 0;
-        }
+.item-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    flex-grow: 1; /* Ensures the name expands while price remains on the right */
+}
 
-        li {
-            margin-bottom: 10px; /* Reduce from 20px to 10px */
-            padding-bottom: 5px; /* Reduce padding */
-            border-bottom: 1px solid #ddd;
-        }
+.item-price {
+    font-size: 1.5em;
+    color: #513f24;
+    text-align: right;
+    min-width: 80px; /* Ensures price is aligned properly */
+}
 
-
-        .item-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: BLACK;
-        }
-
-        .item-price {
-            font-size: 1.5em;
-            color: #513f24;
-        }
 
         .item-description {
             font-size: 1.1em;
