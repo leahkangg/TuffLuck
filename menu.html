@@ -1,116 +1,655 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Tuff Luck</title>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/templatemo-style.css">
-     <style>
-          body {
-    background-color: #8c2626; /* Background color */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <style>
+        body {
+            background-color: #ebeddf; /* Background color */
+        }
+
+        /* Navbar background color */
+        .navbar {
+            background-color: #a73535; /* Dark background color */
+        }
+
+        /* Navbar brand styling */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 6vw; /* Dynamically scale the font size */
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 7vw; /* Adjust for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-brand {
+                font-size: 8vw; /* Make logo text smaller for very small screens */
+            }
+        }
+
+        /* Menu Section */
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #d53d53;
+        }
+
+                        /* Reduce spacing between sections */
+        .menu-section {
+            margin-bottom: 5px; /* Reduce from 10px to 5px */
+            padding-bottom: 5px; /* Reduce padding */
+        }
+
+        /* Reduce space after section headings */
+        .menu-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 5px; /* Reduce from 10px to 5px */
+        }
+
+        /* Reduce space between menu items */
+        .menu-item {
+            margin-bottom: 5px; /* Reduce from 10px to 5px */
+        }
+
+        /* Reduce space between list items */
+        ul {
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px; /* Reduce from 20px to 10px */
+            padding-bottom: 5px; /* Reduce padding */
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        .item-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: BLACK;
+        }
+
+        .item-price {
+            font-size: 1.5em;
+            color: #513f24;
+        }
+
+        .item-description {
+            font-size: 1.1em;
+            color: #282828;
+            margin-top: 5px;
+        }
+
+        /* Style for the list */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        .wings-section {
+    padding-top: 20px; /* Adjust this value as needed */
 }
 
-/* Image styling to make it responsive */
-.menu-image {
-    display: block;
-    margin: 20px auto;
-    width: 90%; /* Adjust width dynamically for responsiveness */
-    max-width: 800px; /* Max width to avoid large images on bigger screens */
+.menu-container {
+    padding-top: 200px; /* Adjust this value as needed, depending on the height of your navbar */
 }
 
-/* Navbar styling */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 6vw; /* Dynamically scale the font size */
-}
 
-.navbar-brand img {
-    max-height: 40px;
-    margin-right: 10px;
-}
-
-/* Mobile-friendly adjustments */
-@media (max-width: 768px) {
-    /* Adjust navbar brand and menu for tablets */
-    .navbar-brand {
-        font-size: 7vw; /* Adjust for smaller screens */
-    }
-
-    .menu-image {
-        width: 100%; /* Full width on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further adjustments for mobile screens */
-    .navbar-brand {
-        font-size: 8vw; /* Make logo text smaller for very small screens */
-    }
-
-    .menu-image {
-        width: 100%; /* Full width on mobile screens */
-    }
-}
-
-     </style>
+    </style>
 </head>
 <body>
 
-     
-     <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <!-- Navbar -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
         <div class="container">
-
-             <div class="navbar-header">
-                  <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                       <span class="icon icon-bar"></span>
-                       <span class="icon icon-bar"></span>
-                       <span class="icon icon-bar"></span>
-                  </button>
-
-                    <!-- Logo Text Here with Logo Image -->
-              <a href="index.html" class="navbar-brand">
-                  <img src="images/logo.png" alt="Tuff Luck Logo">Tuff Luck
-              </a>
-          </div>
-             <!-- MENU LINKS -->
-             <div class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav navbar-nav-first">
-                       <li><a href="index.html" class="smoothScroll">Home</a></li>
-                       <li><a href="menu.html" class="smoothScroll">Menu</a></li>
-                       <li><a href="order.html" class="smoothScroll">Order Online</a></li>
-                       <li><a href="hours.html" class="smoothScroll">Contact and Hours</a></li>
-                       <li><a href="tel:+2142380145" class="smoothScroll">Call Now For Pickup!</a></li>
-
-                       
-                  </ul>
-
-                  
-             </div>
-
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.png" alt="Tuff Luck Logo">Tuff Luck
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="index.html" class="smoothScroll">Home</a></li>
+                    <li><a href="menu.html" class="smoothScroll">Menu</a></li>
+                    <li><a href="order.html" class="smoothScroll">Order Online</a></li>
+                    <li><a href="hours.html" class="smoothScroll">Contact and Hours</a></li>
+                    <li><a href="tel:+2142380145" class="smoothScroll">Call Now For Pickup!</a></li>
+                </ul>
+            </div>
         </div>
-   </section>
+    </section>
 
-     <!-- Menu Image Section -->
-     <section id="menu">
-          <div class="container">
-               <img src="images/menu.jpg" alt="Menu Image" class="menu-image">
-          </div>
-     </section>
+    <!-- Menu Content -->
+    <div class="menu-container">
+       
 
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
+        <section class="menu-section wings-section">
+            <h2 style="text-align: center; font-size: 3em; color: black">Wings</h2>
+        
+            <p style="text-align: center;" class="section-description">+ Add $1.00 for split orders up to 40 pieces.</p>
+            <p style="text-align: center;" class="section-description">+ Add $1.50 for split orders 50 pieces and up.</p>
+            <p style="text-align: center;" class="section-description">+ Add $0.75 and up for all drums/flats.</p>
+            <p style="text-align: center;" class="section-description"><b>MILD | HOT |  PLAIN | ITALIAN | BBQ |  TERIYAKI |  LEMON PEPPER | HONEY MUSTARD</b></p>
+            <p style="text-align: center;" class="section-description"><b>KOREAN SPICY | GARLIC PARMESAN | HONEY LEMON PEPPER | HONEY RANCH</b></p>
+
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">6 Pieces</span>
+                        <span class="item-price">$7.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">10 Pieces</span>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">20 Pieces</span>
+                        <span class="item-price">$24.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">30 Pieces</span>
+                        <span class="item-price">$37.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">40 Pieces</span>
+                        <span class="item-price">$47.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">50 Pieces</span>
+                        <span class="item-price">$60.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">60 Pieces</span>
+                        <span class="item-price">$71.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">75 Pieces</span>
+                        <span class="item-price">$88.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">100 Pieces</span>
+                        <span class="item-price">$114.99</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section class="menu-section wings-section">
+            <h2 style="text-align: center; font-size: 3em; color: black">Chicken Strips</h2>
+        
+           
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">3 Strips</span>
+                        <span class="item-price">$7.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">5 Strips</span>
+                        <span class="item-price">$10.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">10 Strips</span>
+                        <span class="item-price">$20.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">15 Strips</span>
+                        <span class="item-price">$28.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">20 Strips</span>
+                        <span class="item-price">$37.99</span>
+                    </div>
+                </li>
+                
+            </ul>
+        </section>
+
+
+
+        <section class="menu-section wings-section">
+            <h2 style="text-align: center; font-size: 3em; color: black">Combo Dinners</h2>
+        
+            <p style="text-align: center;" class="section-description">+ Includes Fries and 20 oz Drink</p>
+            
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Wings Combo ( 6 Wings ) </span>
+                        <span class="item-price">$11.89</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Wings Combo ( 10 Wings ) </span>
+                        <span class="item-price">$15.69</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Chicken Strips Combo ( 3 Strips ) </span>
+                        <span class="item-price">$11.79</span>
+                    </div>
+               
+                    <div class="menu-item">
+                        <span class="item-name">Chicken Strips Combo ( 4 Strips ) </span>
+                        <span class="item-price">$13.29</span>
+                    </div>
+            
+                    <div class="menu-item">
+                        <span class="item-name">Chicken Strips Combo ( 5 Strips ) </span>
+                        <span class="item-price">$14.99</span>
+                    </div>
+            
+                    <div class="menu-item">
+                        <span class="item-name">Chicken Strips Combo ( 6 Strips ) </span>
+                        <span class="item-price">$16.89</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Sandwich Combo ( Fried Chicken Sandwich ) </span>
+                        <span class="item-price">$11.49</span>
+                    </div>
+               
+                    <div class="menu-item">
+                        <span class="item-name">Sandwich Combo ( Grilled Chicken Sandwich ) </span>
+                        <span class="item-price">$12.49</span>
+                    </div>
+               
+                    <div class="menu-item">
+                        <span class="item-name">Sandwich Combo ( Porkchop Sandwich ) </span>
+                        <span class="item-price">$11.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Boneless Wings Combo </span>
+                        <span class="item-price">$11.49</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section class="menu-section wings-section">
+            <h2 style="text-align: center; font-size: 3em; color: black">Salads</h2>
+        
+            <p style="text-align: center;" class="section-description">+ Served with crackers, dressing, lettuce, cheese, bacon bits, cucumbers, eggs, and pickles</p>
+            <p style="text-align: center;" class="section-description">+ Add 4pc shrimp for $4.79</p>
+
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Chicken Salad</span>
+                        <span class="item-price">$11.59</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Grilled Chicken Salad</span>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Side Salad</span>
+                        <span class="item-price">$6.69</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section class="menu-section wings-section">
+            <h2 style="text-align: center; font-size: 3em; color: black">Tuff Luck Taters</h2>
+        
+            <p style="text-align: center;" class="section-description">+ Add 4pc shrimp for $4.79</p>
+
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Plain Tater ( Potato + Butter )</span>
+                        <span class="item-price">$8.49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Loaded Tater ( Potato + Butter + Cheese + Bacon + Sour Cream )</span>
+                        <span class="item-price">$10.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Chicken Tater ( Potato + Butter + Cheese + Bacon + Fried Chicken + Ranch )</span>
+                        <span class="item-price">$12.99</span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Grilled Chicken Tater ( Potato + Butter + Cheese + Bacon + Grilled Chicken + Ranch )</span>
+                        <span class="item-price">$13.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Beef Tater ( Potato + Butter + Cheese + Bacon + Beef Strips + Ranch )</span>
+                        <span class="item-price">$13.99</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="menu-section wings-section"></section>
+            <h2 style="text-align: center; font-size: 3em; color: black">Sandwiches</h2>
+        
+            <p style="text-align: center;" class="section-description">+ Add cheese for $0.50</p>
+
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Chicken Sandwich</span>
+                        <span class="item-price">$7.39</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Grilled Chicken Sandwich</span>
+                        <span class="item-price">$8.39</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span class="item-name">Pork Chop Sandwich</span>
+                        <span class="item-price">$7.39</span>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+
+        <section class="menu-section wings-section"></section>
+        <h2 style="text-align: center; font-size: 3em; color: black">Shrimp</h2>
+    
+        <ul>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">6 Pieces</span>
+                    <span class="item-price">$7.99</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">10 Pieces</span>
+                    <span class="item-price">$12.49</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">20 Pieces</span>
+                    <span class="item-price">$24.99</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">30 Pieces</span>
+                    <span class="item-price">$37.49</span>
+                </div>
+            </li>
+            </li>
+                <div class="menu-item">
+                    <span class="item-name">6 Piece Shrimp Combo</span>
+                    <span class="item-price">$10.99</span>
+                </div>
+            </li>
+        </li>
+        <div class="menu-item">
+            <span class="item-name">10 Piece Shrimp Combo</span>
+            <span class="item-price">$15.69</span>
+        </div>
+    </li>
+        </ul>
+    </section>
+
+
+
+    <section class="menu-section wings-section"></section>
+        <h2 style="text-align: center; font-size: 3em; color: black">Side Orders</h2>
+    
+        <ul>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Regular Fries</span>
+                    <span class="item-price">$2.69</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Family Size Fries</span>
+                    <span class="item-price">$8.49</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Texas Fries</span>
+                    <span class="item-price">$24.99</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Okra</span>
+                    <span class="item-price">$37.49</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">6 PC Mozzarella Sticks</span>
+                    <span class="item-price">$5.49</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">12 PC Mozzarella Sticks</span>
+                    <span class="item-price">$8.99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">18 PC Mozzarella Sticks</span>
+                    <span class="item-price">$12.99</span>
+                </div>
+            </li>
+            <li>
+            <div class="menu-item">
+                <span class="item-name">12 PC Corn Nuggets</span>
+                <span class="item-price">$2.89</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">24 PC Corn Nuggets</span>
+                <span class="item-price">$5.29</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">18 PC Mozzarella Sticks</span>
+                <span class="item-price">$12.99</span>
+            </div>
+        </li>
+
+
+        <li>
+            <div class="menu-item">
+                <span class="item-name">Extra Sauce</span>
+                <span class="item-price">$0.85</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="menu-item">
+                <span class="item-name">Roll/Texas Toast</span>
+                <span class="item-price">$0.60</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="menu-item">
+                <span class="item-name">Extra Dressing</span>
+                <span class="item-price">$0.65</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="menu-item">
+                <span class="item-name">Celery Sticks </span>
+                <span class="item-price">$1.69</span>
+            </div>
+        </li>
+
+
+        <li>
+            <div class="menu-item">
+                <span class="item-name">Jalapenos </span>
+                <span class="item-price">$1.29</span>
+            </div>
+        </li>
+
+
+
+        </ul>
+    </section>
+
+
+
+
+
+    <section class="menu-section wings-section"></section>
+        <h2 style="text-align: center; font-size: 3em; color: black">Beverages</h2>
+    
+        <ul>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Small Drink (20 oz)</span>
+                    <span class="item-price">$2.19</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Large Drink (32 oz) </span>
+                    <span class="item-price">$2.59</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Half Gallon of Tea</span>
+                    <span class="item-price">$3.79</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Cup of Ice</span>
+                    <span class="item-price">$0.80</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="item-name">Cup of Ice Water</span>
+                    <span class="item-price">$0.80</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Bottle Soda</span>
+                    <span class="item-price">$2.39</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Bottle Water</span>
+                    <span class="item-price">$1.00</span>
+                </div>
+            </li>
+            
+            
+
+        </ul>
+    </section>
+
+
+
+
+
+
+       
+
+
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
