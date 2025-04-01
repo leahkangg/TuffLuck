@@ -6,13 +6,45 @@ http://www.templatemo.com/tm-515-eatery
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@400;700&display=swap');
 
-body {
-  background: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
+
+  body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Rasa', serif;
+    overflow-x: hidden;
 }
+
+h1, h2, h3, p {
+  color: #ffffff; /* Ensures all text is white */
+}
+
+a {
+  color: #00ffff; /* Light blue links for visibility */
+}
+
+button {
+  background-color: #000000; /* Dark gray buttons */
+  color: #ffffff; /* White text on buttons */
+  border: 1px solid #ffffff; /* White border for contrast */
+}
+
+.navbar {
+  background-color: #000000 !important; /* Black background */
+  color: #ffffff !important; /* White text */
+}
+
+.navbar a, .navbar-brand, .nav-link {
+  color: #ffffff !important; /* White text for links */
+}
+
+.navbar a:hover, .nav-link:hover {
+  color: #8b1b0c !important; /* Light blue on hover */
+}
+
+
+
 
 
 
@@ -27,18 +59,18 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   color: #252525;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 50px;
 }
 
 h2 {
-  color: #353535;
-  font-size: 2em;
+  color: #ffffff;
+  font-size: 3em;
   padding-bottom: 10px;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   margin-bottom: 0;
 }
 
@@ -49,7 +81,7 @@ h3 a {
 
 p {
   color: #757575;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 24px;
 }
@@ -96,7 +128,7 @@ a:hover, a:active, a:focus {
 
 .section-title h4 {
   color: #bfbdbd;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 0;
@@ -117,6 +149,17 @@ section {
   position: relative;
   padding: 100px 0;
 }
+
+.team-info p a {
+  font-size: 1.3em; /* Adjust size as needed */
+  font-weight: bold;
+}
+#team .section-title h4 {
+  font-size: 1.5em; /* Adjust this value as needed */
+  font-weight: bold; /* Optional: make it stand out even more */
+}
+
+
 
 #team, 
 #menu,
@@ -142,7 +185,7 @@ section {
 -----------------------------------------*/
 
 .section-btn {
-  background: #ce3232;
+  background: #070707;
   border-radius: 0;
   border: 0;
   color: #f9f9f9;
@@ -216,7 +259,7 @@ section {
 
 .custom-navbar .navbar-brand {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -260,7 +303,7 @@ section {
 }
 
 .custom-navbar .nav li a {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   padding-right: 22px;
@@ -350,7 +393,7 @@ section {
 
 #home h3 {
   color: #f9f9f9;
-  font-size: 14px;
+  font-size: 18px;
   line-height: inherit;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -423,23 +466,33 @@ section {
   background-image: url(../images/IMG2236.JPG);
 }
 
+
+.slider .item-first .section-btn {
+  background: #000000;
+}
+
+.slider .item-first .section-btn:hover {
+  background: #6e0000;
+  color: white
+}
+
 .slider .item-second .section-btn {
-  background: #292929;
+  background: #000000;
 }
 
 .slider .item-second .section-btn:hover {
-  background: #ffffff;
+  background: #6e0000;
+  color: white
+
 }
 
 .slider .item-third .section-btn {
-  background: transparent;
-  border: 1px solid #ffffff;
+  background: #000000;
 }
 
 .slider .item-third .section-btn:hover,
 .slider .item-third .section-btn:focus {
-  background: #ce3232;
-  border-color: transparent;
+  background: #6e0000;
   color: #ffffff;
 }
 
@@ -737,7 +790,7 @@ section {
 }
 
 #contact button#cf-submit {
-  background: #ce3232;
+  background: #0f0f0f;
   border-radius: 0;
   border: 0;
   color: #ffffff;
@@ -746,7 +799,7 @@ section {
 }
 
 #contact button#cf-submit:hover {
-  background: #292929;
+  background: #000000;
   color: #ffffff;
 }
 
@@ -1006,7 +1059,7 @@ footer .social-icon {
   }
 
   h2 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
 
   .menu-thumb .menu-info {
