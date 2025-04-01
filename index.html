@@ -22,23 +22,50 @@
 
 </head>
 <style>
-      /* Add styles to position logo next to Tuff Luck text */
-      .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-size: 32px; /* Adjust font size */
-        }
-
-        .navbar-brand img {
-            max-height: 50px; /* Adjust logo size */
-            margin-right: 10px; /* Space between logo and text */
-        }
-        /* Make images responsive */
+    e images responsive */
      img {
      max-width: 100%;
      height: auto;
      }
 
+
+      /* Navbar background color */
+      .navbar {
+            background-color: #a73535; /* Dark background color */
+        }
+
+        /* Navbar brand styling */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 6vw; /* Dynamically scale the font size */
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+        li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 7vw; /* Adjust for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-brand {
+                font-size: 8vw; /* Make logo text smaller for very small screens */
+            }
+        }
 
      /* Ensure carousel images also resize well */
      .owl-carousel .item img {
