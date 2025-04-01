@@ -19,48 +19,44 @@
   /* Ensure full width and center alignment */
 .content-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space out text and image */
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    text-align: center;
-    width: 100%; /* Ensure container takes full width */
-    padding: 50px 20px; /* Increased padding for a longer container */
-    min-height: 600px; /* Ensures the container has a larger height */
-    font-size: .9em; /* Set the desired smaller font size */
-    line-height: 1.2; /* Adjust line height for better readability */
+    text-align: left; /* Align text to the left */
+    width: 100%;
+    padding: 50px 20px;
+    min-height: 600px;
+    font-size: .9em;
+    line-height: 1.2;
 }
 
 /* Left side text container */
 .left-side {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-align: center;
+    align-items: flex-start; /* Align text and button to the left */
+    justify-content: center;
+    text-align: left;
     flex: 1;
     min-width: 350px;
-    max-width: 600px; /* Control the maximum width */
-
+    max-width: 600px;
 }
 
-/* Right side image container */
-.right-side {
-    display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
-    flex: 1;
-    min-width: 350px;
-    height: 100%; /* Ensures the image container takes the full height */
+/* White text for the heading */
+.left-side h1 {
+    color: white; /* Make the text white */
+    font-size: 4em;
+    font-weight: bold;
 }
 
-.right-side img {
-    width: 100%; /* Ensure image takes up full width */
-    height: 100%; /* Ensure the height is the same as the width, making it square */
-    object-fit: cover; /* Maintain aspect ratio and ensure image covers the area */
-    border-radius: 10px;
+/* Quote text styling */
+.left-side .quote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: white; /* Ensure quote is also white */
 }
 
-/* Order Now button */
+/* Order button */
 .order-btn {
     display: inline-block;
     padding: 16px 32px;
@@ -72,98 +68,74 @@
     border-radius: 10px;
     transition: background 0.3s ease-in-out;
     text-align: center;
-    width: 80%; /* Increase the width */
-    max-width: 500px; /* Set maximum width */
+    width: 80%;
+    max-width: 500px;
     margin-top: 20px;
-    margin-bottom: 20px; /* Add bottom margin */
 }
 
-/* Hover state for Order Now button */
 .order-btn:hover {
     background-color: #8b2d2d;
 }
 
-/* Section for Order Now */
-#order-section {
-    padding: 100px 20px;
-    background-color: #f8f8f8;
-    text-align: center;
-}
-
-/* Order Now section title and paragraph */
-#order-section h2 {
-    font-size: 3em;
-    font-weight: bold;
-}
-
-#order-section p {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-}
-
-/* Make Order Now buttons larger */
-#order-section .order-btn {
-    padding: 16px 32px;
-    font-size: 1.4em;
-    width: 60%;
-    max-width: 500px;
-    margin-bottom: 15px;
-}
-
-/* Navbar logo and text */
-.navbar-brand {
+/* Right side image container */
+.right-side {
     display: flex;
+    justify-content: center;
     align-items: center;
-    font-size: 32px;
-    color: white !important;
+    flex: 1;
+    min-width: 350px;
+    height: 100%;
 }
 
-.navbar-brand img {
-    max-height: 50px;
-    margin-right: 10px;
+.right-side img {
+    width: 100%;
+    max-width: 650px; /* Set max width to prevent image from getting too large */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* Ensure the navbar color and hover */
-.navbar.custom-navbar {
-    background-color: #8f1212;
-}
-
-.navbar .navbar-nav li a {
-    color: white !important;
-}
-
-.navbar .navbar-nav li a:hover {
-    color: #b64137 !important;
-}
-
-/* Responsive media queries */
+/* Responsive design adjustments */
 @media (max-width: 1024px) {
     .content-container {
         flex-direction: column;
+        text-align: center;
     }
 
-    .left-side, .right-side {
-        width: 100%; /* Make sure they take full width */
+    .left-side {
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-side {
+        margin-top: 20px;
     }
 
     .order-btn {
-        width: 85%; /* Increase button width for smaller screens */
+        width: 85%;
     }
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2em;
-    }
+  /* Navbar brand styling */
+  .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 6vw; /* Dynamically scale the font size */
+        }
 
-    .quote {
-        font-size: 1.3em;
-    }
+        .navbar-brand img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
 
-    .order-btn {
-        font-size: 18px;
-        padding: 14px 28px;
-    }
+
+        .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text slightly more to the right */
+    justify-content: center;
+    text-align: left;
+    padding-left: 30px; /* Adjust this value as needed */
 }
 
 </style>
@@ -218,8 +190,8 @@
      <section id="quote-image">
           <div class="content-container">
                <div class="left-side">
-                    <h1>Satisfying and hot meals, delivered to your door—no storefront, just flavor.</h1>
-                    <p class="quote"><i>A ghost kitchen experience that delivers nothing but the best.</i></p>
+                    <h1>Satisfying and hot meals, delivered to your door - no hassle, just flavor.</h1>
+                    <p class="quote"><i>An experience that delivers nothing but the best.</i></p>
                     <a href="#order-section" class="order-btn">Order Now</a>
 
                </div>
@@ -230,7 +202,7 @@
 
        <!-- ORDER SECTION -->
 <section id="order-section" style="text-align: center; padding: 100px 20px; background-color: #f8f8f8;">
-    <h2 style="font-size: 3em; font-weight: bold;">Order Now</h2>
+    <h2 style="font-size: 3em; font-weight: bold; color: black">Order Now</h2>
     <p style="font-size: 1.4em; margin-bottom: 40px;">Get your meal delivered via your favorite service or call for pickup!</p>
     
     <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
