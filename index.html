@@ -28,25 +28,27 @@
 @media (max-width: 768px) {
     #new-menu .row {
         flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
         text-align: center; /* Center text */
     }
 
     #new-menu .col-md-6 {
-        width: 100%; /* Make both text and image full width */
-        padding: 0 5%; /* Add some padding for spacing */
+        width: 100%; /* Full width for better layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content */
     }
 
-    #new-menu h4 {
-        font-size: 3em; /* Adjust heading size */
-    }
-
-    #new-menu h2 {
-        font-size: 1.5em; /* Adjust subheading size */
+    #new-menu h4, 
+    #new-menu h2,
+    #new-menu p {
+        text-align: center; /* Ensure text is centered */
     }
 
     .menu-thumb {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .menu-thumb img {
