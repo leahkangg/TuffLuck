@@ -27,27 +27,33 @@
 
 @media (max-width: 768px) {
     #new-menu .row {
-        flex-wrap: wrap; /* Allow items to wrap */
-        flex-direction: column-reverse; /* Place the image below the text */
-        text-align: center; /* Center align text */
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center text */
     }
 
     #new-menu .col-md-6 {
-        width: 100% !important; /* Make each section full width */
-        padding: 0 15px; /* Add some padding */
-    }
-
-    #new-menu .menu-thumb img {
-        max-width: 100%; /* Ensure image scales properly */
-        height: auto;
-        margin: 0 auto;
+        width: 100%; /* Make both text and image full width */
+        padding: 0 5%; /* Add some padding for spacing */
     }
 
     #new-menu h4 {
-        font-size: 3em; /* Adjust font size for better mobile readability */
+        font-size: 3em; /* Adjust heading size */
+    }
+
+    #new-menu h2 {
+        font-size: 1.5em; /* Adjust subheading size */
+    }
+
+    .menu-thumb {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-thumb img {
+        max-width: 100%; /* Ensure image scales properly */
+        height: auto;
     }
 }
-
 
      img {
      max-width: 100%;
