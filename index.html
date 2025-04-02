@@ -26,43 +26,42 @@
 <style>
 
 @media (max-width: 768px) {
+@media (max-width: 768px) {
+    /* Ensure the parent container for the row is flex and centered */
     #new-menu .row {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text */
-    }
-
-    #new-menu .col-md-6 {
-        width: 100%; /* Full width for better layout */
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content */
-        text-align: center; /* Center text inside */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
-    /* Ensure text is centered */
-    #new-menu h4, 
-    #new-menu h2,
-    #new-menu p {
-        text-align: center; 
+    /* Ensure the image column is centered */
+    #new-menu .col-md-6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;  /* Ensure full width on mobile */
+        padding-left: 0;  /* Remove any unnecessary padding */
+        padding-right: 0;
     }
 
-    /* Ensure the image is centered and responsive */
+    /* Ensure the image is responsive and centered */
     .menu-thumb {
         display: flex;
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center image vertically */
-        width: 100%;
-        margin-top: 20px; /* Optional spacing */
+        justify-content: center;
+        align-items: center;
+        width: 100%;  /* Full width for the image container */
     }
 
     .menu-thumb img {
-        max-width: 100%; /* Ensure image scales properly */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Maintain aspect ratio while filling the container */
-        border-radius: 10px;
+        max-width: 100%;  /* Make the image responsive */
+        height: auto;  /* Maintain aspect ratio */
+        object-fit: contain;  /* Keep the aspect ratio and avoid clipping */
+        border-radius: 10px;  /* Optional rounded corners */
     }
 }
+
 
      img {
      max-width: 100%;
